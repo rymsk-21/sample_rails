@@ -9488,3 +9488,110 @@ puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
 puma (4.3.6) lib/puma/server.rb:472:in `process_client'
 puma (4.3.6) lib/puma/server.rb:328:in `block in run'
 puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for ::1 at 2022-02-23 22:36:37 +0900
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 4170.2ms | Allocations: 5446078)
+  Rendered layouts/_shim.html.erb (Duration: 0.2ms | Allocations: 73)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:18:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 15.9ms | Allocations: 9996)
+  Rendered layouts/_footer.html.erb (Duration: 0.5ms | Allocations: 172)
+  Rendered layout layouts/application.html.erb (Duration: 4224.8ms | Allocations: 5479941)
+Completed 200 OK in 4243ms (Views: 4228.8ms | ActiveRecord: 1.3ms | Allocations: 5483889)
+
+
+Started GET "/sw.js" for ::1 at 2022-02-23 22:36:42 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/sw.js"):
+  
+
+ArgumentError: wrong number of arguments (given 2, expected 3)
+	from /Users/sekiryouasa/.rbenv/versions/2.6.9/lib/ruby/gems/2.6.0/gems/actionview-6.1.4.1/lib/action_view/base.rb:230:in `initialize'
+	from /Users/sekiryouasa/.rbenv/versions/2.6.9/lib/ruby/gems/2.6.0/gems/web-console-4.0.1/lib/web_console/template.rb:20:in `new'
+	from /Users/sekiryouasa/.rbenv/versions/2.6.9/lib/ruby/gems/2.6.0/gems/web-console-4.0.1/lib/web_console/template.rb:20:in `render'
+	from /Users/sekiryouasa/.rbenv/versions/2.6.9/lib/ruby/gems/2.6.0/gems/web-console-4.0.1/lib/web_console/middleware.rb:35:in `block in call'
+	from /Users/sekiryouasa/.rbenv/versions/2.6.9/lib/ruby/gems/2.6.0/gems/web-console-4.0.1/lib/web_console/middleware.rb:17:in `catch'
+	from /Users/sekiryouasa/.rbenv/versions/2.6.9/lib/ruby/gems/2.6.0/gems/web-console-4.0.1/lib/web_console/middleware.rb:17:in `call'
+	from /Users/sekiryouasa/.rbenv/versions/2.6.9/lib/ruby/gems/2.6.0/gems/actionpack-6.1.4.1/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+	from /Users/sekiryouasa/.rbenv/versions/2.6.9/lib/ruby/gems/2.6.0/gems/railties-6.1.4.1/lib/rails/rack/logger.rb:37:in `call_app'
+	from /Users/sekiryouasa/.rbenv/versions/2.6.9/lib/ruby/gems/2.6.0/gems/railties-6.1.4.1/lib/rails/rack/logger.rb:26:in `block in call'
+	from /Users/sekiryouasa/.rbenv/versions/2.6.9/lib/ruby/gems/2.6.0/gems/activesupport-6.1.4.1/lib/active_support/tagged_logging.rb:99:in `block in tagged'
+	from /Users/sekiryouasa/.rbenv/versions/2.6.9/lib/ruby/gems/2.6.0/gems/activesupport-6.1.4.1/lib/active_support/tagged_logging.rb:37:in `tagged'
+	from /Users/sekiryouasa/.rbenv/versions/2.6.9/lib/ruby/gems/2.6.0/gems/activesupport-6.1.4.1/lib/active_support/tagged_logging.rb:99:in `tagged'
+	from /Users/sekiryouasa/.rbenv/versions/2.6.9/lib/ruby/gems/2.6.0/gems/railties-6.1.4.1/lib/rails/rack/logger.rb:26:in `call'
+	from /Users/sekiryouasa/.rbenv/versions/2.6.9/lib/ruby/gems/2.6.0/gems/sprockets-rails-3.4.2/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+	from /Users/sekiryouasa/.rbenv/versions/2.6.9/lib/ruby/gems/2.6.0/gems/actionpack-6.1.4.1/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+	from /Users/sekiryouasa/.rbenv/versions/2.6.9/lib/ruby/gems/2.6.0/gems/actionpack-6.1.4.1/lib/action_dispatch/middleware/request_id.rb:26:in `call'
+	from /Users/sekiryouasa/.rbenv/versions/2.6.9/lib/ruby/gems/2.6.0/gems/rack-2.2.3/lib/rack/method_override.rb:24:in `call'
+	from /Users/sekiryouasa/.rbenv/versions/2.6.9/lib/ruby/gems/2.6.0/gems/rack-2.2.3/lib/rack/runtime.rb:22:in `call'
+	from /Users/sekiryouasa/.rbenv/versions/2.6.9/lib/ruby/gems/2.6.0/gems/activesupport-6.1.4.1/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+	from /Users/sekiryouasa/.rbenv/versions/2.6.9/lib/ruby/gems/2.6.0/gems/actionpack-6.1.4.1/lib/action_dispatch/middleware/executor.rb:14:in `call'
+	from /Users/sekiryouasa/.rbenv/versions/2.6.9/lib/ruby/gems/2.6.0/gems/actionpack-6.1.4.1/lib/action_dispatch/middleware/static.rb:24:in `call'
+	from /Users/sekiryouasa/.rbenv/versions/2.6.9/lib/ruby/gems/2.6.0/gems/rack-2.2.3/lib/rack/sendfile.rb:110:in `call'
+	from /Users/sekiryouasa/.rbenv/versions/2.6.9/lib/ruby/gems/2.6.0/gems/actionpack-6.1.4.1/lib/action_dispatch/middleware/host_authorization.rb:92:in `call'
+	from /Users/sekiryouasa/.rbenv/versions/2.6.9/lib/ruby/gems/2.6.0/gems/webpacker-4.0.7/lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+	from /Users/sekiryouasa/.rbenv/versions/2.6.9/lib/ruby/gems/2.6.0/gems/rack-proxy-0.7.2/lib/rack/proxy.rb:67:in `call'
+	from /Users/sekiryouasa/.rbenv/versions/2.6.9/lib/ruby/gems/2.6.0/gems/railties-6.1.4.1/lib/rails/engine.rb:539:in `call'
+	from /Users/sekiryouasa/.rbenv/versions/2.6.9/lib/ruby/gems/2.6.0/gems/puma-4.3.6/lib/puma/configuration.rb:228:in `call'
+	from /Users/sekiryouasa/.rbenv/versions/2.6.9/lib/ruby/gems/2.6.0/gems/puma-4.3.6/lib/puma/server.rb:713:in `handle_request'
+	from /Users/sekiryouasa/.rbenv/versions/2.6.9/lib/ruby/gems/2.6.0/gems/puma-4.3.6/lib/puma/server.rb:472:in `process_client'
+	from /Users/sekiryouasa/.rbenv/versions/2.6.9/lib/ruby/gems/2.6.0/gems/puma-4.3.6/lib/puma/server.rb:328:in `block in run'
+	from /Users/sekiryouasa/.rbenv/versions/2.6.9/lib/ruby/gems/2.6.0/gems/puma-4.3.6/lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/sw.js" for ::1 at 2022-02-23 22:37:12 +0900
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/sw.js"):
+  
+
+ArgumentError: wrong number of arguments (given 2, expected 3)
+	from /Users/sekiryouasa/.rbenv/versions/2.6.9/lib/ruby/gems/2.6.0/gems/actionview-6.1.4.1/lib/action_view/base.rb:230:in `initialize'
+	from /Users/sekiryouasa/.rbenv/versions/2.6.9/lib/ruby/gems/2.6.0/gems/web-console-4.0.1/lib/web_console/template.rb:20:in `new'
+	from /Users/sekiryouasa/.rbenv/versions/2.6.9/lib/ruby/gems/2.6.0/gems/web-console-4.0.1/lib/web_console/template.rb:20:in `render'
+	from /Users/sekiryouasa/.rbenv/versions/2.6.9/lib/ruby/gems/2.6.0/gems/web-console-4.0.1/lib/web_console/middleware.rb:35:in `block in call'
+	from /Users/sekiryouasa/.rbenv/versions/2.6.9/lib/ruby/gems/2.6.0/gems/web-console-4.0.1/lib/web_console/middleware.rb:17:in `catch'
+	from /Users/sekiryouasa/.rbenv/versions/2.6.9/lib/ruby/gems/2.6.0/gems/web-console-4.0.1/lib/web_console/middleware.rb:17:in `call'
+	from /Users/sekiryouasa/.rbenv/versions/2.6.9/lib/ruby/gems/2.6.0/gems/actionpack-6.1.4.1/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+	from /Users/sekiryouasa/.rbenv/versions/2.6.9/lib/ruby/gems/2.6.0/gems/railties-6.1.4.1/lib/rails/rack/logger.rb:37:in `call_app'
+	from /Users/sekiryouasa/.rbenv/versions/2.6.9/lib/ruby/gems/2.6.0/gems/railties-6.1.4.1/lib/rails/rack/logger.rb:26:in `block in call'
+	from /Users/sekiryouasa/.rbenv/versions/2.6.9/lib/ruby/gems/2.6.0/gems/activesupport-6.1.4.1/lib/active_support/tagged_logging.rb:99:in `block in tagged'
+	from /Users/sekiryouasa/.rbenv/versions/2.6.9/lib/ruby/gems/2.6.0/gems/activesupport-6.1.4.1/lib/active_support/tagged_logging.rb:37:in `tagged'
+	from /Users/sekiryouasa/.rbenv/versions/2.6.9/lib/ruby/gems/2.6.0/gems/activesupport-6.1.4.1/lib/active_support/tagged_logging.rb:99:in `tagged'
+	from /Users/sekiryouasa/.rbenv/versions/2.6.9/lib/ruby/gems/2.6.0/gems/railties-6.1.4.1/lib/rails/rack/logger.rb:26:in `call'
+	from /Users/sekiryouasa/.rbenv/versions/2.6.9/lib/ruby/gems/2.6.0/gems/sprockets-rails-3.4.2/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+	from /Users/sekiryouasa/.rbenv/versions/2.6.9/lib/ruby/gems/2.6.0/gems/actionpack-6.1.4.1/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+	from /Users/sekiryouasa/.rbenv/versions/2.6.9/lib/ruby/gems/2.6.0/gems/actionpack-6.1.4.1/lib/action_dispatch/middleware/request_id.rb:26:in `call'
+	from /Users/sekiryouasa/.rbenv/versions/2.6.9/lib/ruby/gems/2.6.0/gems/rack-2.2.3/lib/rack/method_override.rb:24:in `call'
+	from /Users/sekiryouasa/.rbenv/versions/2.6.9/lib/ruby/gems/2.6.0/gems/rack-2.2.3/lib/rack/runtime.rb:22:in `call'
+	from /Users/sekiryouasa/.rbenv/versions/2.6.9/lib/ruby/gems/2.6.0/gems/activesupport-6.1.4.1/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+	from /Users/sekiryouasa/.rbenv/versions/2.6.9/lib/ruby/gems/2.6.0/gems/actionpack-6.1.4.1/lib/action_dispatch/middleware/executor.rb:14:in `call'
+	from /Users/sekiryouasa/.rbenv/versions/2.6.9/lib/ruby/gems/2.6.0/gems/actionpack-6.1.4.1/lib/action_dispatch/middleware/static.rb:24:in `call'
+	from /Users/sekiryouasa/.rbenv/versions/2.6.9/lib/ruby/gems/2.6.0/gems/rack-2.2.3/lib/rack/sendfile.rb:110:in `call'
+	from /Users/sekiryouasa/.rbenv/versions/2.6.9/lib/ruby/gems/2.6.0/gems/actionpack-6.1.4.1/lib/action_dispatch/middleware/host_authorization.rb:92:in `call'
+	from /Users/sekiryouasa/.rbenv/versions/2.6.9/lib/ruby/gems/2.6.0/gems/webpacker-4.0.7/lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+	from /Users/sekiryouasa/.rbenv/versions/2.6.9/lib/ruby/gems/2.6.0/gems/rack-proxy-0.7.2/lib/rack/proxy.rb:67:in `call'
+	from /Users/sekiryouasa/.rbenv/versions/2.6.9/lib/ruby/gems/2.6.0/gems/railties-6.1.4.1/lib/rails/engine.rb:539:in `call'
+	from /Users/sekiryouasa/.rbenv/versions/2.6.9/lib/ruby/gems/2.6.0/gems/puma-4.3.6/lib/puma/configuration.rb:228:in `call'
+	from /Users/sekiryouasa/.rbenv/versions/2.6.9/lib/ruby/gems/2.6.0/gems/puma-4.3.6/lib/puma/server.rb:713:in `handle_request'
+	from /Users/sekiryouasa/.rbenv/versions/2.6.9/lib/ruby/gems/2.6.0/gems/puma-4.3.6/lib/puma/server.rb:472:in `process_client'
+	from /Users/sekiryouasa/.rbenv/versions/2.6.9/lib/ruby/gems/2.6.0/gems/puma-4.3.6/lib/puma/server.rb:328:in `block in run'
+	from /Users/sekiryouasa/.rbenv/versions/2.6.9/lib/ruby/gems/2.6.0/gems/puma-4.3.6/lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateMicroposts (20220223134039)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "microposts" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text, "user_id" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_558c81314b"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_microposts_on_user_id" ON "microposts" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_microposts_on_user_id_and_created_at" ON "microposts" ("user_id", "created_at")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220223134039"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
