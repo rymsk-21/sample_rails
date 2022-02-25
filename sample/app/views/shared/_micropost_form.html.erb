@@ -6,7 +6,7 @@
   <%= f.submit "Post", class: "btn btn-primary" %>
 <!--  マイクロポストのcreateフォームに画像アップロードを追加する-->
   <span class="image">
-    <%= f.file_field :image %>
+    <%= f.file_field :image, accept: "image/jpeg,image/gif,image/png" %>
   </span>
 <% end %>
 

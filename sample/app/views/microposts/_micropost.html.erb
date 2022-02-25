@@ -5,7 +5,7 @@
     <%= micropost.content %>
     <!--    マイクロポストの画像表示を追加する-->
     <%= image_tag micropost.image if micropost.image.attached? %>
-    <%#= image_tag micropost.display_image if micropost.image.attached? %>
+    <%= image_tag micropost.display_image if micropost.image.attached? %>
   </span>
   <span class="timestamp">
     Posted <%= time_ago_in_words(micropost.created_at) %> ago.
